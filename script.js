@@ -65,6 +65,73 @@ const words = [
   ""
 ];
 
+const vwords = [
+  "Danny",
+  "Bill",
+  "Flora",
+  "Henry",
+  "Chúa",
+  "Chúa Giêsu",
+  "10 điều tâm niệm",
+  "Mimi",
+  "Kể chuyện",
+  "Tình yêu",
+  "Hòa bình",
+  "Màu đen",
+  "Tôma Thiên",
+  "Tội lỗi",
+  "Thánh thiện",
+  "Cầu nguyện",
+  "Nữ tu",
+  "Bài tập ở trường",
+  "Gia sư",
+  "Đài phát thanh",
+  "TV",
+  "Bánh Taco",
+  "Trầm cảm",
+  "Nước",
+  "Nô lệ",
+  "Khỉ",
+  "Lười biếng",
+  "Chấm điểm tự động",
+  "Cha Tập",
+  "Phòng tập thể hình",
+  "Người máy",
+  "Ninja",
+  "Bóng rổ",
+  "Pizza",
+  "Trà sữa",
+  "Bắp rang bơ",
+  "Xúc xích Hot Dog",
+  "Áo hoodie",
+  "Ba lô",
+  "Tai nghe",
+  "Kính râm",
+  "Kem",
+  "Kẹo bông gòn",
+  "Sô-cô-la",
+  "Nhãn dán",
+  "Nhang",
+  "Chữa bệnh",
+  "Trí tuệ nhân tạo",
+  "Quái vật",
+  "Âm nhạc",
+  "Tia laser",
+  "Khỉ",
+  "Trong bóng tối",
+  "Kiếm",
+  "Hòa bình thế giới",
+  "Trại Galile",
+  "Bạn bè",
+  "Tự động hóa",
+  "Hành vi",
+  "Tâm linh",
+  "Sức khỏe tinh thần",
+  "Sức khỏe thể chất",
+  "Vấn đề",
+  ""
+];
+
 
 function generateWord(){
     const wordBox = document.getElementById("wordBox");
@@ -72,7 +139,18 @@ function generateWord(){
     wordBox.innerText = words[randomIndex];
 }
 
+function vgenerateWord(){
+    const wordBox = document.getElementById("wordBox");
+    const randomIndex = Math.floor(Math.random() * words.length);
+    wordBox.innerText = vwords[randomIndex];
+}
+
 const pressMe = document.getElementById("pressMe");
 if(pressMe){
 pressMe.addEventListener("click", generateWord);
+}
+
+const vpressMe = document.getElementById("vpressMe");
+if(vpressMe){
+vpressMe.addEventListener("click", vgenerateWord);
 }
